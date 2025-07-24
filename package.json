@@ -1,7 +1,7 @@
 {
   "name": "btg-otp-api",
   "version": "1.0.0",
-  "description": "API de Gerenciamento de OTP - BTG Pactual Empresas",
+  "description": "API de Gerenciamento de OTP - BTG Desafio",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
@@ -13,8 +13,8 @@
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix"
   },
-  "keywords": ["otp", "api", "btg", "clean-architecture"],
-  "author": "BTG Pactual Empresas",
+  "keywords": [],
+  "author": "BTG Desafio",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
