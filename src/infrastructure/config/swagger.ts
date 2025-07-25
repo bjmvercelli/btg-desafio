@@ -100,10 +100,31 @@ const options = {
             },
           },
         },
+        HealthResponse: {
+          type: 'object',
+          properties: {
+            status: {
+              type: 'string',
+              description: 'Status da API',
+              example: 'OK',
+            },
+            timestamp: {
+              type: 'string',
+              format: 'date-time',
+              description: 'Timestamp da verificação',
+              example: '2025-07-25T02:35:19.176Z',
+            },
+            service: {
+              type: 'string',
+              description: 'Nome do serviço',
+              example: 'BTG OTP API',
+            },
+          },
+        },
       },
     },
   },
-  apis: ['./src/infrastructure/routes/*.ts', './src/infrastructure/controllers/*.ts'],
+  apis: ['./src/infrastructure/routes/*.ts', './src/infrastructure/controllers/*.ts', './src/index.ts'],
 };
 
 export const specs = swaggerJsdoc(options); 

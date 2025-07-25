@@ -25,12 +25,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Swagger documentation
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
-
-const otpRoutes = new OTPRoutesImpl();
-app.use('/api/otp', otpRoutes.getRouter());
-
 /**
  * @swagger
  * /health:
@@ -64,6 +58,12 @@ app.get('/health', (req, res) => {
     service: 'BTG OTP API',
   });
 });
+
+// @ts-ignore
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
+
+const otpRoutes = new OTPRoutesImpl();
+app.use('/api/otp', otpRoutes.getRouter());
 
 app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
   logger.error('Unhandled error:', err);
