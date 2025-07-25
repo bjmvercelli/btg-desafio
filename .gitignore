@@ -141,4 +141,10 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
+# Database files
+database/
+*.db
+*.sqlite
+*.sqlite3
+
 # End of https://www.toptal.com/developers/gitignore/api/node

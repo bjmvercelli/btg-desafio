@@ -13,12 +13,6 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-const dbPath = process.env.DB_PATH || './database/otp.db';
-const dbDir = path.dirname(dbPath);
-if (!fs.existsSync(dbDir)) {
-  fs.mkdirSync(dbDir, { recursive: true });
-}
-
 const logsDir = './logs';
 if (!fs.existsSync(logsDir)) {
   fs.mkdirSync(logsDir, { recursive: true });
