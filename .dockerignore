@@ -12,7 +12,6 @@ coverage.json
 *.lcov
 .cache
 .parcel-cache
-dist
 logs
 database
 *.log
@@ -21,4 +20,7 @@ database
 .idea
 *.swp
 *.swo
-*~ 
+*~
+__tests__
+*.test.ts
+*.spec.ts 
