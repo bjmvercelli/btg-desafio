@@ -40,7 +40,7 @@ export class OTPControllerImpl implements OTPController {
   async validateOTP(req: Request, res: Response): Promise<void> {
     try {
       const request: ValidateOTPRequestDTO = {
-        token: req.body.token,
+        token: req.query.token as string,
       };
 
       const result = await this.validateOTPUseCase.execute(request);
